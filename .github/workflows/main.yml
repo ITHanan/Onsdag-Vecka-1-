@@ -7,7 +7,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    environment: ${{ inputs.env || 'dev' }} 
+    environment: ${{ inputs.env || 'development' }} 
 
     steps:
       - name: Print environment
