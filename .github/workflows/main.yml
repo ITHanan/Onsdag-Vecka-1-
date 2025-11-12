@@ -5,10 +5,9 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-
-    environment: ${{ inputs.env || 'development' }} 
-
-    steps:
+      name: 🚀 Deploy to environment
+      runs-on: ubuntu-latest
+      environment: ${{ inputs.env || 'development' }} 
+      steps:
       - name: Print environment
         run: echo "Deploy to ${{ github.environment }}"
