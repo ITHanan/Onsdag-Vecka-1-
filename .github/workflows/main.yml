@@ -1,0 +1,14 @@
+name: Deploy
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    environment: ${{ inputs.env || 'dev' }} 
+
+    steps:
+      - name: Print environment
+        run: echo "Deploy to ${{ github.environment }}"
